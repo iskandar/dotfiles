@@ -94,6 +94,7 @@ brew install ssh-copy-id
 brew install tree
 brew install vbindiff
 brew install zopfli
+brew install terragrunt
 
 # Customisations by @iskandar
 brew install python3
@@ -114,6 +115,7 @@ brew install youtube-dl
 # https://github.com/PowerShell/PowerShell
 brew cask install powershell
 brew cask install dotnet
+brew cask install tunnelblick
 
 # Cloud CLIs
 brew install awscli

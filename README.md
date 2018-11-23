@@ -9,6 +9,7 @@ __For use with Mac OS High Sierra (`10.13.x`)__
 * Various homebrew installs
 * Varous customisations (e.g. `spectacle.json`)
 * Python 3 requirements.txt and installer script (`python3.sh`)
+* NodeJS global packages (`nodejs.sh`)
 * PowerShell module installer (`pwsh.ps1`)
 
 ### Install Python 3 packages

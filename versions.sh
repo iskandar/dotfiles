@@ -22,6 +22,9 @@ groovy -version
 mvn -version
 gradle -version
 
+# dotnet
+dotnet --info
+
 # JavaScript
 node --version
 npm --version
@@ -69,5 +72,3 @@ az --version
 vsts --version
 jx --version
 
-
-How to use a gist to track your versions

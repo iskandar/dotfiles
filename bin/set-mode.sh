@@ -4,9 +4,9 @@
 
 DESIRED=${1:-work}
 # These vars must be set elsewhere (in .exports, maybe)
-WORK_DC=lon5
-WORK_BASTION_KEY=$HOME/.ssh/balabit_rsa
-WORK_BASTION_HOST=cbast.${WORK_DC}.corp.rackspace.net
+# WORK_DC=lon5
+# WORK_BASTION_KEY=$HOME/.ssh/balabit_rsa
+# WORK_BASTION_HOST=cbast.${WORK_DC}.corp.rxxx
 
 USERNAME=$(whoami)
 SSH_DIR=$HOME/.ssh
@@ -75,12 +75,16 @@ echo "----> Resetting SSH Agent list"
 case $DESIRED in
 home)
     SSH_KEY_LIST="$HOME/.ssh/id_rsa ${WORK_BASTION_KEY}"
+    unset GITHUB_URL # For use with https://github.com/defunkt/gist
     ;;
 work)
     SSH_KEY_LIST="$HOME/.ssh/id_rsa ${WORK_BASTION_KEY}"
+    # export GITHUB_URL=https://github.rackspace.com/ # For use with https://github.com/defunkt/gist
 esac
 ssh-add -D
 ssh-add $SSH_KEY_LIST
 echo "  ==> Identities:"
 ssh-add -l -E md5
 echo "----> Done"
+
+

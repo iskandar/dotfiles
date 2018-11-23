@@ -43,7 +43,6 @@ brew install vim --with-override-system-vi
 brew install grep
 brew install openssh
 brew install screen
-brew install homebrew/php/php56 --with-gmp
 
 # Install font tools.
 brew tap bramstein/webfonttools
@@ -94,45 +93,93 @@ brew install ssh-copy-id
 brew install tree
 brew install vbindiff
 brew install zopfli
-brew install terragrunt
 
 # Customisations by @iskandar
-brew install python3
-# https://github.com/adobe-fonts/source-code-pro
-brew tap caskroom/fonts
-brew cask install font-source-code-pro
-# https://sourcefoundry.org/hack/
-brew cask install caskroom/fonts/font-hack
 # Various utils
 brew install htop
 brew install watch
 brew install ncdu
 brew install speedtest_cli
-brew install node
 brew install jq
+brew install pwgen
 brew install thefuck
 brew install youtube-dl
+brew cask install tunnelblick
+
+# Larger apps
+brew cask install cheatsheet
+brew cask install vlc
+brew cask install xquartz
+brew cask install spectacle
+brew cask install spotify
+
+# Fonts
+#   https://github.com/adobe-fonts/source-code-pro
+brew tap caskroom/fonts
+brew cask install font-source-code-pro
+#   https://sourcefoundry.org/hack/
+brew cask install caskroom/fonts/font-hack
+
+# Revision control related
+brew install gist
+
+# Python and related
+# Also see python3.sh
+brew install python3
+
+# NodeJS and related
+# Also see nodejs.sh
+brew install node
+
+# Java and related
+brew cask install java # requires password
+brew install groovy
+brew install maven
+brew install gradle
+
+# PHP and related
+brew install php
+
 # https://github.com/PowerShell/PowerShell
 brew cask install powershell
 brew cask install dotnet
-brew cask install tunnelblick
+
+# Hashicorp, Terraform and related
+brew install terraform
+brew install packer
+brew install vault
+brew install terragrunt
 
 # Cloud CLIs
 brew install awscli
 brew cask install google-cloud-sdk
 brew install azure-cli
 
+# Docker and related
+## Include docker-compose and docker-completion
+brew cask install docker # Will ask for credentials in a GUI popup
+brew install docker-machine docker-machine-driver-hyperkit
+brew install docker-compose-completion docker-machine-completion
+
 # Kubernetes and related
 brew install kubernetes-cli
 brew install kubernetes-helm
+brew cask install minikube
+#   https://draft.sh/
+brew tap Azure/draft
+brew install Azure/draft/draft
 
-# Larger apps
-brew cask install cheatsheet
-brew cask install vlc
-brew cask install java # requires password
-brew cask install xquartz
-brew cask install spectacle
-# brew cask install spotify
+# Other CLIs
+# VSTS/Azure DevOps
+brew install vsts-cli
+
+# https://jenkins-x.io/getting-started/install/
+brew tap jenkins-x/jx
+brew install jx
+
+# Data related
+brew install redis
+# brew cask install mysql-shell
 
 # Remove outdated versions from the cellar.
 brew cleanup

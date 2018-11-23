@@ -40,3 +40,6 @@ export WORK_BASTION_HOST=cbast.${WORK_DC}.corp.rackspace.net
 
 # Cloud Platform defaults
 export AWS_DEFAULT_REGION=eu-west-1
+
+# Gist ID for tracking versions of things
+export VERSION_GIST_ID=c82597b511cdd93c89b1e2cbc1068b59

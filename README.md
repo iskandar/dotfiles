@@ -11,6 +11,8 @@ __For use with Mac OS High Sierra (`10.13.x`)__
 * Python 3 requirements.txt and installer script (`python3.sh`)
 * NodeJS global packages (`nodejs.sh`)
 * PowerShell module installer (`pwsh.ps1`)
+* Minikube setup script (`minikube.sh`)
+* Version info script (`versions.sh`)
 
 ### Install Python 3 packages
 
@@ -18,6 +20,14 @@ After installing all the homebrew formulae:
 
 ```bash
 ./python3.sh
+```
+
+### Install NodeJS packages
+
+After installing all the homebrew formulae:
+
+```bash
+./nodejs.sh
 ```
 
 ### Install PowerShell Modules

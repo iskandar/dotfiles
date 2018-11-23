@@ -1,11 +1,6 @@
-#!/usr/bin/env bash
-
-cat > /tmp/requirements.txt <<EOF
 arrow==0.12.1
 astroid==2.0.4
 aws-lambda-builders==0.0.2
-# AWS SAM CLI
-# https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html
 aws-sam-cli==0.7.0
 aws-sam-translator==1.8.0
 binaryornot==0.4.4
@@ -52,7 +47,3 @@ websocket-client==0.54.0
 Werkzeug==0.14.1
 whichcraft==0.5.2
 wrapt==1.10.11
-EOF
-
-pip3 install --user -r /tmp/requirements.txt
-rm -vf /tmp/requirements.txt

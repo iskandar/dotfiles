@@ -120,6 +120,12 @@ brew cask install tunnelblick
 # Cloud CLIs
 brew install awscli
 brew cask install google-cloud-sdk
+brew install azure-cli
+
+# Kubernetes and related
+brew install kubernetes-cli
+brew install kubernetes-helm
+
 # Larger apps
 brew cask install cheatsheet
 brew cask install vlc

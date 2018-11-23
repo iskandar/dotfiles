@@ -2,6 +2,31 @@
 
 ![Screenshot of my shell prompt](https://i.imgur.com/EkEtphC.png)
 
+# Iskandar's modifications
+
+__For use with Mac OS High Sierra (`10.13.x`)__
+
+* Various homebrew installs
+* Varous customisations (e.g. `spectacle.json`)
+* Python 3 requirements.txt and installer script (`python3.sh`)
+* PowerShell module installer (`pwsh.ps1`)
+
+### Install Python 3 packages
+
+After installing all the homebrew formulae:
+
+```bash
+./python3.sh
+```
+
+### Install PowerShell Modules
+
+After installing all the homebrew formulae:
+
+```bash
+pwsh -f ./pwsh.ps1
+```
+
 ## Installation
 
 **Warning:** If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what that entails. Use at your own risk!

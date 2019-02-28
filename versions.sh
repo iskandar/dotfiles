@@ -32,7 +32,7 @@ npm list -g
 
 yo --version
 yarn --version
-yarn global list
+yarn global list | grep -v "Done in"
 
 # Python
 python --version

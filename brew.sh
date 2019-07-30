@@ -162,6 +162,19 @@ done
 # Set a global Java Version
 jenv global 1.8
 
+# Enable jenv plugins
+# See https://github.com/jenv/jenv/tree/master/available-plugins
+jenv enable-plugin maven
+jenv enable-plugin groovy
+jenv enable-plugin springboot
+jenv enable-plugin gradle
+jenv enable-plugin ant
+jenv enable-plugin lein
+jenv enable-plugin sbt
+
+
+
+
 # Java ecosystem tools
 brew install groovy
 brew install maven

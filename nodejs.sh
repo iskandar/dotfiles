@@ -1,4 +1,8 @@
 
+
+# Intall nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+
 # Get yarn installed, we'll use that for our global installs
 npm install -g yarn
 

@@ -2,6 +2,9 @@
 
 # Install command-line tools using Homebrew.
 
+# Exit on any error
+set -e
+
 # Make sure we’re using the latest Homebrew.
 brew update
 
@@ -21,7 +24,7 @@ brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed --with-default-names
+brew install gnu-sed
 # Install Bash 4.
 brew install bash
 brew install bash-completion2
@@ -33,13 +36,13 @@ if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
 fi;
 
 # Install `wget` with IRI support.
-brew install wget --with-iri
+brew install wget
 
 # Install GnuPG to enable PGP-signing commits.
 brew install gnupg
 
 # Install more recent versions of some macOS tools.
-brew install vim --with-override-system-vi
+brew install vim
 brew install grep
 brew install openssh
 brew install screen
@@ -83,7 +86,7 @@ brew install ack
 #brew install exiv2
 brew install git
 brew install git-lfs
-brew install imagemagick --with-webp
+brew install imagemagick
 brew install lua
 brew install lynx
 brew install p7zip
@@ -134,13 +137,35 @@ brew install python3
 brew install node
 
 # Java and related
-brew cask install java # requires password
+# Oracle Java is no longer in homebrew, so we
+# choose to use openjdk instead
+brew uninstall java || true
+brew tap adoptopenjdk/openjdk
+# Will require password entry:
+brew cask install adoptopenjdk8
+brew cask install adoptopenjdk10
+brew cask install adoptopenjdk11
+
+# See http://www.jenv.be/
+brew install jenv
+
+# Set up jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+# Add each JVM with jenv
+JVM_DIR=/Library/Java/JavaVirtualMachines/
+for DIR in $(ls $JVM_DIR); do
+  jenv add $JVM_DIR/$DIR/Contents/Home/
+done
+
+# Set a global Java Version
+jenv global 1.8
+
+# Java ecosystem tools
 brew install groovy
 brew install maven
 brew install gradle
-
-# PHP and related
-brew install php
 
 # https://github.com/PowerShell/PowerShell
 brew cask install powershell
@@ -182,6 +207,9 @@ brew install jx
 # Data related
 brew install redis
 # brew cask install mysql-shell
+
+# VS Code
+brew cask install visual-studio-code
 
 # Remove outdated versions from the cellar.
 brew cleanup

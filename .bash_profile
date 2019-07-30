@@ -49,3 +49,8 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # https://github.com/nvbn/thefuck/wiki/Shell-aliases
 eval $(thefuck --alias)
+
+# jenv setup
+# See http://www.jenv.be/
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"

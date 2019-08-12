@@ -1,8 +1,5 @@
 
 
-# Intall nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-
 # Get yarn installed, we'll use that for our global installs
 npm install -g yarn
 
@@ -20,5 +17,8 @@ yarn global add localtunnel
 
 # https://www.getpostman.com/docs/v6/postman/collection_runs/command_line_integration_with_newman
 yarn global add newman
+
+# https://cli.angular.io/
+yarn global add @angular/cli
 
 # Items like gulp, webpack should be installed locally as part of an application's node_modules

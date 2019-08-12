@@ -4,8 +4,8 @@ sudo chown root:wheel /usr/local/bin/docker-machine-driver-hyperkit && \
     sudo chmod u+s /usr/local/bin/docker-machine-driver-hyperkit
 
 minikube config set vm-driver hyperkit
-minikube config set memory 4096
-minikube config set cpus 2
+minikube config set memory 7000
+minikube config set cpus 4
 
 minikube delete
 minikube start

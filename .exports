@@ -33,11 +33,6 @@ export MANPAGER='less -X';
 # https://stackoverflow.com/a/42265848/96656
 export GPG_TTY=$(tty);
 
-# Variables for use with ~/bin/set-ssh-config.sh
-export WORK_DC=lon5
-export WORK_BASTION_KEY=$HOME/.ssh/balabit_rsa
-export WORK_BASTION_HOST=cbast.${WORK_DC}.corp.rackspace.net
-
 # Cloud Platform defaults
 export AWS_DEFAULT_REGION=eu-west-1
 

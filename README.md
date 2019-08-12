@@ -4,7 +4,7 @@
 
 # Iskandar's modifications
 
-__For use with Mac OS High Sierra (`10.13.x`)__
+__Tested with Mac OS Mojave (`10.14.x`)__
 
 * Various homebrew installs
 * Varous customisations (e.g. `spectacle.json`)
@@ -13,6 +13,11 @@ __For use with Mac OS High Sierra (`10.13.x`)__
 * PowerShell module installer (`pwsh.ps1`)
 * Minikube setup script (`minikube.sh`)
 * Version info script (`versions.sh`)
+* Sets up multiple language environment managers:
+  * `pyenv`
+  * `jenv`
+  * `nodenv`
+
 
 ### Install Python 3 packages
 

@@ -129,12 +129,31 @@ brew cask install caskroom/fonts/font-hack
 brew install gist
 
 # Python and related
-# Also see python3.sh
-brew install python3
+# https://github.com/pyenv/pyenv
+brew install pyenv
+pyenv install 3.7.4
+pyenv install 2.7.16
+pyenv global 3.7.4
+
+# Eanble pyenv
+eval "$(pyenv init -)"
+
+# pipenv
+brew install pipenv
+eval "$(pipenv --completion)"
 
 # NodeJS and related
 # Also see nodejs.sh
 brew install node
+brew install nodenv
+
+# See https://github.com/nodenv/nodenv
+nodenv init
+
+# Use nodenv to install node versions
+nodenv install 11.15.0
+nodenv install 12.7.0
+nodenv global 12.7.0
 
 # Java and related
 # Oracle Java is no longer in homebrew, so we
@@ -160,7 +179,7 @@ for DIR in $(ls $JVM_DIR); do
 done
 
 # Set a global Java Version
-jenv global 1.8
+jenv global 1.8.0.221
 
 # Enable jenv plugins
 # See https://github.com/jenv/jenv/tree/master/available-plugins
@@ -171,8 +190,6 @@ jenv enable-plugin gradle
 jenv enable-plugin ant
 jenv enable-plugin lein
 jenv enable-plugin sbt
-
-
 
 
 # Java ecosystem tools

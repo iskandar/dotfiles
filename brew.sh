@@ -202,7 +202,9 @@ brew cask install powershell
 brew cask install dotnet
 
 # Hashicorp, Terraform and related
-brew install terraform
+# brew install terraform
+brew install warrensbox/tap/tfswitch
+tfswitch 0.12.6
 brew install packer
 brew install vault
 brew install terragrunt

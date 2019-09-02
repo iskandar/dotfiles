@@ -3,6 +3,7 @@
 cat > /tmp/requirements.txt <<EOF
 arrow==0.12.1
 astroid==2.0.4
+awscli-local==0.4
 aws-lambda-builders==0.0.2
 # AWS SAM CLI
 # https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html
